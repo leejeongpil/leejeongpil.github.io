@@ -15,7 +15,7 @@
 minimal_mistakes_skin: "contrast" # "default" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
 
 # Site Settings
-locale: "ko-KR" # default: "en-US"
+locale: "ko-KR" # default: "en-US" "ko-KR"
 title: "Lee JeongPil's IT Tech Blog"
 title_separator: "-"
 subtitle: # site tagline that appears below site title in masthead
