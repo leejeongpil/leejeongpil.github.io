@@ -10,7 +10,11 @@ main:
   #   url: /collection-archive/
   # - title: "Sitemap"
   #   url: /sitemap/
+  - title: "Home"
+    url: https://github.com/leejeongpil
   - title: "About"
+    url: https://github.com/leejeongpil
+  - title: "Index"
     url: https://github.com/leejeongpil
   - title: "Sample Posts1"
     url: /year-archive/

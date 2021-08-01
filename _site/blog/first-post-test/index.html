@@ -9,8 +9,8 @@
   <head>
     <meta charset="utf-8">
 
-<!-- begin _includes/seo.html --><title>[Jekyll] Test - Lee JeongPil’s IT Tech Blog</title>
-<meta name="description" content="md 파일에 마크다운 문법으로 작성하여 Github 원격 저장소에 업로드 해보자. 에디터는 Visual Studio code 사용! 로컬 서버에서 확인도 해보자.">
+<!-- begin _includes/seo.html --><title>Mac) github.io 만들기_01: 환경설정 - Lee JeongPil’s IT Tech Blog</title>
+<meta name="description" content="Mac에 guthub.io(깃허브 블로그)를 만들기 위한 환경을 세팅 해보자.">
 
 
   <meta name="author" content="Lee JeongPil">
@@ -22,11 +22,11 @@
 <meta property="og:type" content="article">
 <meta property="og:locale" content="ko_KR">
 <meta property="og:site_name" content="Lee JeongPil's IT Tech Blog">
-<meta property="og:title" content="[Jekyll] Test">
+<meta property="og:title" content="Mac) github.io 만들기_01: 환경설정">
 <meta property="og:url" content="https://leejeongpil.github.io//blog/first-post-test/">
 
 
-  <meta property="og:description" content="md 파일에 마크다운 문법으로 작성하여 Github 원격 저장소에 업로드 해보자. 에디터는 Visual Studio code 사용! 로컬 서버에서 확인도 해보자.">
+  <meta property="og:description" content="Mac에 guthub.io(깃허브 블로그)를 만들기 위한 환경을 세팅 해보자.">
 
 
 
@@ -125,7 +125,11 @@
         <ul class="visible-links"><li class="masthead__menu-item">
               <a href="https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/">Quick-Start Guide</a>
             </li><li class="masthead__menu-item">
+              <a href="https://github.com/leejeongpil">Home</a>
+            </li><li class="masthead__menu-item">
               <a href="https://github.com/leejeongpil">About</a>
+            </li><li class="masthead__menu-item">
+              <a href="https://github.com/leejeongpil">Index</a>
             </li><li class="masthead__menu-item">
               <a href="/year-archive/">Sample Posts1</a>
             </li><li class="masthead__menu-item">
@@ -194,7 +198,11 @@
           
         
           
-            <li><a href="https://www.notion.so/Lee-JeongPil-67bd73b192f0405fac46949d6100483f" rel="nofollow noopener noreferrer me"><i class="fab fa-fw fa-instagram" aria-hidden="true"></i><span class="label">Notion</span></a></li>
+            <li><a href="https://www.youtube.com/channel/UClSdv2fRY2cM5RGF6U5qQGw" rel="nofollow noopener noreferrer me"><i class="fab fa-fw fa-youtube" aria-hidden="true"></i><span class="label">Youtube</span></a></li>
+          
+        
+          
+            <li><a href="https://www.notion.so/Lee-JeongPil-67bd73b192f0405fac46949d6100483f" rel="nofollow noopener noreferrer me"><i class="fab fa-fw fa-notion" aria-hidden="true"></i><span class="label">Notion</span></a></li>
           
         
       
@@ -263,8 +271,8 @@
 
 
   <article class="page h-entry" itemscope itemtype="https://schema.org/CreativeWork">
-    <meta itemprop="headline" content="[Jekyll] Test">
-    <meta itemprop="description" content="md 파일에 마크다운 문법으로 작성하여 Github 원격 저장소에 업로드 해보자. 에디터는 Visual Studio code 사용! 로컬 서버에서 확인도 해보자.">
+    <meta itemprop="headline" content="Mac) github.io 만들기_01: 환경설정">
+    <meta itemprop="description" content="Mac에 guthub.io(깃허브 블로그)를 만들기 위한 환경을 세팅 해보자.">
     <meta itemprop="datePublished" content="2020-05-25T00:00:00+09:00">
     <meta itemprop="dateModified" content="2020-05-25T00:00:00+09:00">
 
@@ -272,7 +280,7 @@
       
         <header>
           <h1 id="page-title" class="page__title p-name" itemprop="headline">
-            <a href="https://leejeongpil.github.io//blog/first-post-test/" class="u-url" itemprop="url">[Jekyll] Test
+            <a href="https://leejeongpil.github.io//blog/first-post-test/" class="u-url" itemprop="url">Mac) github.io 만들기_01: 환경설정
 </a>
           </h1>
           
@@ -289,7 +297,7 @@
       <span class="page__meta-readtime">
         <i class="far fa-clock" aria-hidden="true"></i>
         
-          최대 1 분 소요
+          2 분 소요
         
       </span>
     
@@ -304,12 +312,126 @@
           <aside class="sidebar__right sticky">
             <nav class="toc">
               <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> On This Page</h4></header>
-              <ul class="toc__menu"><li><a href="#what-the">what the?</a></li></ul>
+              <ul class="toc__menu"><li><a href="#mac-githubio-만들기-깃헙-블로그-jekyll">Mac) github.io 만들기, 깃헙 블로그, jekyll</a></li></ul>
 
             </nav>
           </aside>
         
-        <h1 id="what-the">what the?</h1>
+        <h1 id="mac-githubio-만들기-깃헙-블로그-jekyll">Mac) github.io 만들기, 깃헙 블로그, jekyll</h1>
+
+<p>bundle exec jekyll serve</p>
+
+<ol>
+  <li>환경 설정
+    <ol>
+      <li>homebrew install: terminal 에 입력하여 homebrew 를 설치한다.
+(사이트 참조: <a href="https://brew.sh/index_ko">https://brew.sh/index_ko</a>)
+<strong>/bin/bash -c “$(curl -fsSL <a href="https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh">https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh</a>)”</strong></li>
+      <li><strong>brew install rbenv</strong>: mac 은 기본적으로 ruby 가 설치되어 있다. 이에 따라 알맞은 버전의 ruby 를 설치하고 경우에 따라 원하는 버전의 ruby 를 사용해야할 일이 있을 수 있는데 rbenv 를 이용해 ruby 설치 및 버전관리를 진행한다. 터미널에 brew install rbenv 입력하여 다운.</li>
+      <li>알맞은 ruby 설치: <a href="https://www.ruby-lang.org/en/downloads/">https://www.ruby-lang.org/en/downloads/</a> 를 참고하여 알맞은 version을 설치하자. 나는 2.6.8이 설치 가능한 버전이며 EOL 이어서 설치했다. rbenv install 2.6.8
+        <ol>
+          <li>설치전 체크할 것!</li>
+          <li>rbenv versions:
+            <ul>
+              <li>system (set by /Users/”내컴퓨터이름”/.rbenv/version) 이렇게 나오면서 현재 ruby는 기존 설치되어 있던 ruby를 쓰고 있음을 알 수 있다.</li>
+            </ul>
+          </li>
+          <li>rbenv install -l: 설치 가능한 ruby의 버전을 확인 할 수 있다.</li>
+        </ol>
+      </li>
+      <li>설치한 ruby 로 변경
+        <ol>
+          <li>rbenv versions: 다시 한번 확인하면 다음과 같이 나온다.
+            <ul>
+              <li>system (set by /Users/”내컴퓨터이름”/.rbenv/version)
+2.6.8</li>
+            </ul>
+          </li>
+          <li>rbenv global 2.6.8: ruby 사용 버전을 설치한 2.6.8 로 바꿔준다.
+rbenv versions 를 입력하면 다음과 같이 바뀐 것을 알 수 있다.
+system
+            <ul>
+              <li>2.6.8 (set by /Users/”내컴퓨터이름”/.rbenv/version)</li>
+            </ul>
+          </li>
+          <li>터미널을 종료하고 재실행 한 뒤 ruby -v 를 입력하면 버전이 올바르게 반영 된 것을 볼 수 있다.</li>
+        </ol>
+      </li>
+      <li><del>gem install –user-install bundler jekyll: jekyll, bundler 설치 하는 명령어
+만약 다음과 같은 오류가 뜬다면
+WARNING:  You don’t have /Users/”내컴퓨터이름”/.gem/ruby/2.6.0/bin in your PATH, gem executables will not run.
+2.6.8 을 2.6.0 으로 인지해야 하기 때문이다. 즉 path 설정을 해주면 되는데
+echo ‘export PATH=”$HOME/.gem/ruby/2.6.0/bin:$PATH”’ » ~/.zshrc</del></li>
+      <li>gem install bundler jekyll: 이거 일때는 괜찮?
+export PATH=”$HOME/.rbenv/bin:$PATH”
+eval “$(rbenv init -)”
+를 ~/.zshrc 에 추가해준다.</li>
+      <li>jekyll -v: jekyll 4.2.0, bundler -v: Bundler version 2.2.24임을 확인할 수 있다.</li>
+      <li>gem 으로 install 한 것들을 다 날리고 싶다면 gem uninstall -aIx 또는 gem uninstall —aIl</li>
+    </ol>
+  </li>
+  <li>github repository 생성 및 클론
+    <ol>
+      <li>Repository name 은 username.github.io 로 한다. 예) minsu.github.io</li>
+    </ol>
+  </li>
+  <li>
+    <p>jekyll theme 고르기</p>
+
+    <ol>
+      <li><a href="http://jekyllthemes.org/">http://jekyllthemes.org/</a>, <a href="http://themes.jekyllrc.org/">http://themes.jekyllrc.org/</a>, <a href="https://jekyllthemes.io/">https://jekyllthemes.io/</a> 와 같은 사이트에서 원하는 테마를 고른다. 나는 <a href="https://github.com/mmistakes/minimal-mistakes">https://github.com/mmistakes/minimal-mistakes</a> 이 테마 사용한다. 얘네는 가이드도 있다 <a href="https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/">https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/</a></li>
+      <li>골랐으면 해당 깃을 클론한다. git clone <a href="https://github.com/mmistakes/minimal-mistakes">https://github.com/mmistakes/minimal-mistakes</a></li>
+      <li>.git 파일을 지워준다.</li>
+      <li>
+        <p><a href="https://mmistakes.github.io/minimal-mistakes/docs/installation/#install-dependencies">https://mmistakes.github.io/minimal-mistakes/docs/installation/#install-dependencies</a> 을 참조하여 Gemfile 을 수정한다. 아래 코드와 같다.</p>
+
+        <div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">source</span> <span class="s2">"https://rubygems.org"</span>
+
+<span class="c1"># Hello! This is where you manage which Jekyll version is used to run.</span>
+<span class="c1"># When you want to use a different version, change it below, save the</span>
+<span class="c1"># file and run `bundle install`. Run Jekyll with `bundle exec`, like so:</span>
+<span class="c1">#</span>
+<span class="c1">#     bundle exec jekyll serve</span>
+<span class="c1">#</span>
+<span class="c1"># This will help ensure the proper Jekyll version is running.</span>
+<span class="c1"># Happy Jekylling!</span>
+
+<span class="c1"># gem "github-pages", group: :jekyll_plugins</span>
+
+<span class="c1"># To upgrade, run `bundle update`.</span>
+
+<span class="n">gem</span> <span class="s2">"jekyll"</span>
+<span class="n">gem</span> <span class="s2">"minimal-mistakes-jekyll"</span>
+
+<span class="c1"># The following plugins are automatically loaded by the theme-gem:</span>
+<span class="c1">#   gem "jekyll-paginate"</span>
+<span class="c1">#   gem "jekyll-sitemap"</span>
+<span class="c1">#   gem "jekyll-gist"</span>
+<span class="c1">#   gem "jekyll-feed"</span>
+<span class="c1">#   gem "jekyll-include-cache"</span>
+<span class="c1">#</span>
+<span class="c1"># If you have any other plugins, put them here!</span>
+<span class="n">group</span> <span class="ss">:jekyll_plugins</span> <span class="k">do</span>
+<span class="k">end</span>
+</code></pre></div>        </div>
+      </li>
+      <li><a href="https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/#remove-the-unnecessary">https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/#remove-the-unnecessary</a> 을 참고하여 추가적으로 불필요한 파일을 삭제한다. 아래와 같다.
+        <ul>
+          <li><code class="language-plaintext highlighter-rouge">.editorconfig</code></li>
+          <li><code class="language-plaintext highlighter-rouge">.gitattributes</code></li>
+          <li><code class="language-plaintext highlighter-rouge">.github</code></li>
+          <li><code class="language-plaintext highlighter-rouge">/docs</code></li>
+          <li><code class="language-plaintext highlighter-rouge">/test</code></li>
+          <li><code class="language-plaintext highlighter-rouge">CHANGELOG.md</code></li>
+          <li><code class="language-plaintext highlighter-rouge">minimal-mistakes-jekyll.gemspec</code></li>
+          <li><code class="language-plaintext highlighter-rouge">README.md</code></li>
+          <li><code class="language-plaintext highlighter-rouge">screenshot-layouts.png</code></li>
+          <li><code class="language-plaintext highlighter-rouge">screenshot.png</code></li>
+        </ul>
+      </li>
+    </ol>
+  </li>
+</ol>
 
         
       </section>
@@ -366,7 +488,7 @@
     <h4 class="page__share-title">공유하기</h4>
   
 
-  <a href="https://twitter.com/intent/tweet?text=%5BJekyll%5D+Test%20https%3A%2F%2Fleejeongpil.github.io%2F%2Fblog%2Ffirst-post-test%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+  <a href="https://twitter.com/intent/tweet?text=Mac%29+github.io+%EB%A7%8C%EB%93%A4%EA%B8%B0_01%3A+%ED%99%98%EA%B2%BD%EC%84%A4%EC%A0%95%20https%3A%2F%2Fleejeongpil.github.io%2F%2Fblog%2Ffirst-post-test%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
 
   <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fleejeongpil.github.io%2F%2Fblog%2Ffirst-post-test%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
 
@@ -420,7 +542,11 @@
         
       
         
-          <li><a href="https://www.notion.so/Lee-JeongPil-67bd73b192f0405fac46949d6100483f" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-instagram" aria-hidden="true"></i> Notion</a></li>
+          <li><a href="https://www.youtube.com/channel/UClSdv2fRY2cM5RGF6U5qQGw" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-youtube" aria-hidden="true"></i> Youtube</a></li>
+        
+      
+        
+          <li><a href="https://www.notion.so/Lee-JeongPil-67bd73b192f0405fac46949d6100483f" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-notion" aria-hidden="true"></i> Notion</a></li>
         
       
     

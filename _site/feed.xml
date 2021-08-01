@@ -1,1 +1,115 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.0">Jekyll</generator><link href="https://leejeongpil.github.io//feed.xml" rel="self" type="application/atom+xml" /><link href="https://leejeongpil.github.io//" rel="alternate" type="text/html" /><updated>2021-08-01T17:19:45+09:00</updated><id>https://leejeongpil.github.io//feed.xml</id><title type="html">Lee JeongPil’s IT Tech Blog</title><subtitle>For constantly learning.</subtitle><author><name>Lee JeongPil</name></author><entry><title type="html">[Jekyll] Test</title><link href="https://leejeongpil.github.io//blog/first-post-test/" rel="alternate" type="text/html" title="[Jekyll] Test" /><published>2020-05-25T00:00:00+09:00</published><updated>2020-05-25T00:00:00+09:00</updated><id>https://leejeongpil.github.io//blog/first-post-test</id><content type="html" xml:base="https://leejeongpil.github.io//blog/first-post-test/">&lt;h1 id=&quot;what-the&quot;&gt;what the?&lt;/h1&gt;</content><author><name>Lee JeongPil</name></author><category term="Blog" /><category term="Blog" /><category term="jekyll" /><category term="Github" /><category term="Git" /><summary type="html">md 파일에 마크다운 문법으로 작성하여 Github 원격 저장소에 업로드 해보자. 에디터는 Visual Studio code 사용! 로컬 서버에서 확인도 해보자.</summary></entry></feed>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.0">Jekyll</generator><link href="https://leejeongpil.github.io//feed.xml" rel="self" type="application/atom+xml" /><link href="https://leejeongpil.github.io//" rel="alternate" type="text/html" /><updated>2021-08-01T18:54:09+09:00</updated><id>https://leejeongpil.github.io//feed.xml</id><title type="html">Lee JeongPil’s IT Tech Blog</title><subtitle>For constantly learning.</subtitle><author><name>Lee JeongPil</name></author><entry><title type="html">Mac) github.io 만들기_01: 환경설정</title><link href="https://leejeongpil.github.io//blog/first-post-test/" rel="alternate" type="text/html" title="Mac) github.io 만들기_01: 환경설정" /><published>2020-05-25T00:00:00+09:00</published><updated>2020-05-25T00:00:00+09:00</updated><id>https://leejeongpil.github.io//blog/first-post-test</id><content type="html" xml:base="https://leejeongpil.github.io//blog/first-post-test/">&lt;h1 id=&quot;mac-githubio-만들기-깃헙-블로그-jekyll&quot;&gt;Mac) github.io 만들기, 깃헙 블로그, jekyll&lt;/h1&gt;
+
+&lt;p&gt;bundle exec jekyll serve&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;환경 설정
+    &lt;ol&gt;
+      &lt;li&gt;homebrew install: terminal 에 입력하여 homebrew 를 설치한다.
+(사이트 참조: &lt;a href=&quot;https://brew.sh/index_ko&quot;&gt;https://brew.sh/index_ko&lt;/a&gt;)
+&lt;strong&gt;/bin/bash -c “$(curl -fsSL &lt;a href=&quot;https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh&quot;&gt;https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh&lt;/a&gt;)”&lt;/strong&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;strong&gt;brew install rbenv&lt;/strong&gt;: mac 은 기본적으로 ruby 가 설치되어 있다. 이에 따라 알맞은 버전의 ruby 를 설치하고 경우에 따라 원하는 버전의 ruby 를 사용해야할 일이 있을 수 있는데 rbenv 를 이용해 ruby 설치 및 버전관리를 진행한다. 터미널에 brew install rbenv 입력하여 다운.&lt;/li&gt;
+      &lt;li&gt;알맞은 ruby 설치: &lt;a href=&quot;https://www.ruby-lang.org/en/downloads/&quot;&gt;https://www.ruby-lang.org/en/downloads/&lt;/a&gt; 를 참고하여 알맞은 version을 설치하자. 나는 2.6.8이 설치 가능한 버전이며 EOL 이어서 설치했다. rbenv install 2.6.8
+        &lt;ol&gt;
+          &lt;li&gt;설치전 체크할 것!&lt;/li&gt;
+          &lt;li&gt;rbenv versions:
+            &lt;ul&gt;
+              &lt;li&gt;system (set by /Users/”내컴퓨터이름”/.rbenv/version) 이렇게 나오면서 현재 ruby는 기존 설치되어 있던 ruby를 쓰고 있음을 알 수 있다.&lt;/li&gt;
+            &lt;/ul&gt;
+          &lt;/li&gt;
+          &lt;li&gt;rbenv install -l: 설치 가능한 ruby의 버전을 확인 할 수 있다.&lt;/li&gt;
+        &lt;/ol&gt;
+      &lt;/li&gt;
+      &lt;li&gt;설치한 ruby 로 변경
+        &lt;ol&gt;
+          &lt;li&gt;rbenv versions: 다시 한번 확인하면 다음과 같이 나온다.
+            &lt;ul&gt;
+              &lt;li&gt;system (set by /Users/”내컴퓨터이름”/.rbenv/version)
+2.6.8&lt;/li&gt;
+            &lt;/ul&gt;
+          &lt;/li&gt;
+          &lt;li&gt;rbenv global 2.6.8: ruby 사용 버전을 설치한 2.6.8 로 바꿔준다.
+rbenv versions 를 입력하면 다음과 같이 바뀐 것을 알 수 있다.
+system
+            &lt;ul&gt;
+              &lt;li&gt;2.6.8 (set by /Users/”내컴퓨터이름”/.rbenv/version)&lt;/li&gt;
+            &lt;/ul&gt;
+          &lt;/li&gt;
+          &lt;li&gt;터미널을 종료하고 재실행 한 뒤 ruby -v 를 입력하면 버전이 올바르게 반영 된 것을 볼 수 있다.&lt;/li&gt;
+        &lt;/ol&gt;
+      &lt;/li&gt;
+      &lt;li&gt;&lt;del&gt;gem install –user-install bundler jekyll: jekyll, bundler 설치 하는 명령어
+만약 다음과 같은 오류가 뜬다면
+WARNING:  You don’t have /Users/”내컴퓨터이름”/.gem/ruby/2.6.0/bin in your PATH, gem executables will not run.
+2.6.8 을 2.6.0 으로 인지해야 하기 때문이다. 즉 path 설정을 해주면 되는데
+echo ‘export PATH=”$HOME/.gem/ruby/2.6.0/bin:$PATH”’ » ~/.zshrc&lt;/del&gt;&lt;/li&gt;
+      &lt;li&gt;gem install bundler jekyll: 이거 일때는 괜찮?
+export PATH=”$HOME/.rbenv/bin:$PATH”
+eval “$(rbenv init -)”
+를 ~/.zshrc 에 추가해준다.&lt;/li&gt;
+      &lt;li&gt;jekyll -v: jekyll 4.2.0, bundler -v: Bundler version 2.2.24임을 확인할 수 있다.&lt;/li&gt;
+      &lt;li&gt;gem 으로 install 한 것들을 다 날리고 싶다면 gem uninstall -aIx 또는 gem uninstall —aIl&lt;/li&gt;
+    &lt;/ol&gt;
+  &lt;/li&gt;
+  &lt;li&gt;github repository 생성 및 클론
+    &lt;ol&gt;
+      &lt;li&gt;Repository name 은 username.github.io 로 한다. 예) minsu.github.io&lt;/li&gt;
+    &lt;/ol&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;jekyll theme 고르기&lt;/p&gt;
+
+    &lt;ol&gt;
+      &lt;li&gt;&lt;a href=&quot;http://jekyllthemes.org/&quot;&gt;http://jekyllthemes.org/&lt;/a&gt;, &lt;a href=&quot;http://themes.jekyllrc.org/&quot;&gt;http://themes.jekyllrc.org/&lt;/a&gt;, &lt;a href=&quot;https://jekyllthemes.io/&quot;&gt;https://jekyllthemes.io/&lt;/a&gt; 와 같은 사이트에서 원하는 테마를 고른다. 나는 &lt;a href=&quot;https://github.com/mmistakes/minimal-mistakes&quot;&gt;https://github.com/mmistakes/minimal-mistakes&lt;/a&gt; 이 테마 사용한다. 얘네는 가이드도 있다 &lt;a href=&quot;https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/&quot;&gt;https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;골랐으면 해당 깃을 클론한다. git clone &lt;a href=&quot;https://github.com/mmistakes/minimal-mistakes&quot;&gt;https://github.com/mmistakes/minimal-mistakes&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;.git 파일을 지워준다.&lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;&lt;a href=&quot;https://mmistakes.github.io/minimal-mistakes/docs/installation/#install-dependencies&quot;&gt;https://mmistakes.github.io/minimal-mistakes/docs/installation/#install-dependencies&lt;/a&gt; 을 참조하여 Gemfile 을 수정한다. 아래 코드와 같다.&lt;/p&gt;
+
+        &lt;div class=&quot;language-ruby highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;source&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;https://rubygems.org&quot;&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;# Hello! This is where you manage which Jekyll version is used to run.&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;# When you want to use a different version, change it below, save the&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;# file and run `bundle install`. Run Jekyll with `bundle exec`, like so:&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;#&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;#     bundle exec jekyll serve&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;#&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;# This will help ensure the proper Jekyll version is running.&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;# Happy Jekylling!&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;# gem &quot;github-pages&quot;, group: :jekyll_plugins&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;# To upgrade, run `bundle update`.&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;gem&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;jekyll&quot;&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;gem&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;minimal-mistakes-jekyll&quot;&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;# The following plugins are automatically loaded by the theme-gem:&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;#   gem &quot;jekyll-paginate&quot;&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;#   gem &quot;jekyll-sitemap&quot;&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;#   gem &quot;jekyll-gist&quot;&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;#   gem &quot;jekyll-feed&quot;&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;#   gem &quot;jekyll-include-cache&quot;&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;#&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;# If you have any other plugins, put them here!&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;group&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;:jekyll_plugins&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;do&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;        &lt;/div&gt;
+      &lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/#remove-the-unnecessary&quot;&gt;https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/#remove-the-unnecessary&lt;/a&gt; 을 참고하여 추가적으로 불필요한 파일을 삭제한다. 아래와 같다.
+        &lt;ul&gt;
+          &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;.editorconfig&lt;/code&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;.gitattributes&lt;/code&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;.github&lt;/code&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;/docs&lt;/code&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;/test&lt;/code&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;CHANGELOG.md&lt;/code&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;minimal-mistakes-jekyll.gemspec&lt;/code&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;README.md&lt;/code&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;screenshot-layouts.png&lt;/code&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;screenshot.png&lt;/code&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+    &lt;/ol&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;</content><author><name>Lee JeongPil</name></author><category term="Blog" /><category term="Blog" /><category term="jekyll" /><category term="Github" /><category term="Git" /><summary type="html">Mac에 guthub.io(깃허브 블로그)를 만들기 위한 환경을 세팅 해보자.</summary></entry></feed>
