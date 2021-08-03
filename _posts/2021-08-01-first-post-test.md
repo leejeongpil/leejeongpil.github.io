@@ -11,6 +11,9 @@ toc: true
 toc_sticky: true
 date: 2020-05-25
 last_modified_at: 2020-05-25
+# author_profile: true
+# sidebar:
+#   nav: "main"
 ---
 
 # Mac) github.io 만들기, 깃헙 블로그, jekyll

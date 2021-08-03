@@ -1,0 +1,587 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.24.0 by Michael Rose
+  Copyright 2013-2020 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="ko" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>백준, 1289, 원재의 메모리 복구하기, Python, Java - Lee JeongPil’s IT Tech Blog</title>
+<meta name="description" content="Mac에 guthub.io(깃허브 블로그)를 만들기 위한 환경을 세팅 해보자.">
+
+
+  <meta name="author" content="Lee JeongPil">
+  
+  <meta property="article:author" content="Lee JeongPil">
+  
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="ko_KR">
+<meta property="og:site_name" content="Lee JeongPil's IT Tech Blog">
+<meta property="og:title" content="백준, 1289, 원재의 메모리 복구하기, Python, Java">
+<meta property="og:url" content="https://leejeongpil.github.io//blog/algo-swea-1289/">
+
+
+  <meta property="og:description" content="Mac에 guthub.io(깃허브 블로그)를 만들기 위한 환경을 세팅 해보자.">
+
+
+
+
+
+
+
+  <meta property="article:published_time" content="2020-05-25T00:00:00+09:00">
+
+
+
+  <meta property="article:modified_time" content="2020-05-25T00:00:00+09:00">
+
+
+
+  
+
+  
+
+
+<link rel="canonical" href="https://leejeongpil.github.io//blog/algo-swea-1289/">
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Person",
+      "name": "Lee JeongPil",
+      "url": "https://leejeongpil.github.io//"
+    
+  }
+</script>
+
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+
+  <link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Lee JeongPil's IT Tech Blog Feed">
+
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css"></noscript>
+
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body class="layout--single">
+    <nav class="skip-links">
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+        <a class="site-title" href="/">
+          Lee JeongPil's IT Tech Blog
+          
+        </a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a href="https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/">Quick-Start Guide</a>
+            </li><li class="masthead__menu-item">
+              <a href="https://leejeongpil.github.io">Home</a>
+            </li><li class="masthead__menu-item">
+              <a href="https://github.com/leejeongpil">About</a>
+            </li><li class="masthead__menu-item">
+              <a href="https://github.com/leejeongpil">Index</a>
+            </li><li class="masthead__menu-item">
+              <a href="/year-archive/">Sample Posts1</a>
+            </li><li class="masthead__menu-item">
+              <a href="/collection-archive/">Sample Posts2</a>
+            </li><li class="masthead__menu-item">
+              <a href="/sitemap/">Sample Posts3</a>
+            </li></ul>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">토글 메뉴</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+
+
+<div itemscope itemtype="https://schema.org/Person" class="h-card">
+
+  
+
+  <div class="author__content">
+    <h3 class="author__name p-name" itemprop="name">
+      <a class="u-url" rel="me" href="https://leejeongpil.github.io//" itemprop="url">Lee JeongPil</a>
+    </h3>
+    
+      <div class="author__bio p-note" itemprop="description">
+        <p>IT tech blog that is <strong>constantly learning</strong>.</p>
+
+      </div>
+    
+  </div>
+
+  <div class="author__urls-wrapper">
+    <button class="btn btn--inverse">팔로우</button>
+    <ul class="author__urls social-icons">
+      
+        <li itemprop="homeLocation" itemscope itemtype="https://schema.org/Place">
+          <i class="fas fa-fw fa-map-marker-alt" aria-hidden="true"></i> <span itemprop="name" class="p-locality">Suwon, South-Korea</span>
+        </li>
+      
+
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+            <li><a href="https://www.youtube.com/channel/UClSdv2fRY2cM5RGF6U5qQGw" rel="nofollow noopener noreferrer me"><i class="fab fa-fw fa-youtube" aria-hidden="true"></i><span class="label">Youtube</span></a></li>
+          
+        
+          
+            <li><a href="https://www.notion.so/Lee-JeongPil-67bd73b192f0405fac46949d6100483f" rel="nofollow noopener noreferrer me"><i class="fab fa-fw fa-notion" aria-hidden="true"></i><span class="label">Notion</span></a></li>
+          
+        
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      <!--
+  <li>
+    <a href="http://link-to-whatever-social-network.com/user/" itemprop="sameAs" rel="nofollow noopener noreferrer me">
+      <i class="fas fa-fw" aria-hidden="true"></i> Custom Social Profile Link
+    </a>
+  </li>
+-->
+    </ul>
+  </div>
+</div>
+  
+  </div>
+
+
+
+  <article class="page h-entry" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="백준, 1289, 원재의 메모리 복구하기, Python, Java">
+    <meta itemprop="description" content="Mac에 guthub.io(깃허브 블로그)를 만들기 위한 환경을 세팅 해보자.">
+    <meta itemprop="datePublished" content="2020-05-25T00:00:00+09:00">
+    <meta itemprop="dateModified" content="2020-05-25T00:00:00+09:00">
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title p-name" itemprop="headline">
+            <a href="https://leejeongpil.github.io//blog/algo-swea-1289/" class="u-url" itemprop="url">백준, 1289, 원재의 메모리 복구하기, Python, Java
+</a>
+          </h1>
+          
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          1 분 소요
+        
+      </span>
+    
+  </p>
+
+
+        </header>
+      
+
+      <section class="page__content e-content" itemprop="text">
+        
+          <aside class="sidebar__right sticky">
+            <nav class="toc">
+              <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> On This Page</h4></header>
+              <ul class="toc__menu"><li><a href="#1289-원재의-메모리-복구하기-python-java">1289, 원재의 메모리 복구하기, Python, Java</a></li></ul>
+
+            </nav>
+          </aside>
+        
+        <h1 id="1289-원재의-메모리-복구하기-python-java">1289, 원재의 메모리 복구하기, Python, Java</h1>
+
+<ul>
+  <li>문제 번호: 1289</li>
+  <li>문제 이름: 원재의 메모리 복구하기</li>
+  <li>
+    <p>문제 풀이 전략</p>
+
+    <p>음… 0000…으로 초기화 되어있을 때 되돌리는 방법은? 근데 1이나 0 입력시 뒷값들 다 그거대로 돼 이 뜻은 앞에서부터 원본이랑 같은 값으로 세팅해야한다는 소리이네 ㅎㅎ 뒤에가 맞아도 앞에바꾸면 싹 바뀌니까 최소값은 앞에서부터 차례러 싹 다 하는게 최소네 확인 1.int 리스트로 받아서 2. for 문으로 바꿘거의 첫 인덱스 원본의 첫 인덱스 짝지어서 비교하면 되겠네 3. 이때 원본 바꿘거 두개 리스트 필요할꺼고 횟수기록할 카운트 필요할거고 2번 계속 반복하면서 카운트 올리면 끝</p>
+  </li>
+  <li>
+    <p>문제풀이 코드</p>
+
+    <ul>
+      <li>
+        <p>Python</p>
+
+        <p>어려웠던 점: str 의 인덱스별 접근하여 값 바꾸는건 안되니까 복사하는 식으로 새로운 스트링을 만들어야한다. 리스트로 했어도 좋았을듯?</p>
+
+        <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">T</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">())</span>
+<span class="k">for</span> <span class="n">test_case</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">T</span> <span class="o">+</span> <span class="mi">1</span><span class="p">):</span>
+    <span class="n">ori</span> <span class="o">=</span> <span class="nb">input</span><span class="p">()</span>
+    <span class="n">err_ori</span> <span class="o">=</span> <span class="s">"0"</span><span class="o">*</span><span class="nb">len</span><span class="p">(</span><span class="n">ori</span><span class="p">)</span>
+    <span class="n">count</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">ori</span><span class="p">)):</span>
+        <span class="k">if</span> <span class="n">ori</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">!=</span><span class="n">err_ori</span><span class="p">[</span><span class="n">i</span><span class="p">]:</span>
+            <span class="n">err_ori</span><span class="o">=</span><span class="n">err_ori</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="n">i</span><span class="p">]</span><span class="o">+</span><span class="n">ori</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">*</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">ori</span><span class="p">)</span><span class="o">-</span><span class="n">i</span><span class="p">)</span>
+            <span class="n">count</span><span class="o">+=</span><span class="mi">1</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">"#"</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">test_case</span><span class="p">)</span><span class="o">+</span><span class="s">" "</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">count</span><span class="p">))</span>
+</code></pre></div>        </div>
+      </li>
+      <li>
+        <p>Java</p>
+
+        <p>어려웠던 점:</p>
+
+        <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">java.io.*</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">java.util.*</span><span class="o">;</span>
+
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">Algo01</span> <span class="o">{</span>
+    <span class="cm">/**
+     * 음... 0000...으로 초기화 되어있을 때 되돌리는 방법은? 근데 1이나 0 입력시 뒷값들 다 그거대로 돼 이 뜻은 앞에서부터 원본이랑
+     * 같은 값으로 세팅해야한다는 소리이네 ㅎㅎ 뒤에가 맞아도 앞에바꾸면 싹 바뀌니까 최소값은 앞에서부터 차례러 싹 다 하는게 최소네 확인 1.
+     * int 리스트로 받아서 2. for 문으로 바꿘거의 첫 인덱스 원본의 첫 인덱스 짝지어서 비교하면 되겠네 3. 이때 원본 바꿘거 두개
+     * 리스트 필요할꺼고 횟수기록할 카운트 필요할거고 2번 계속 반복하면서 카운트 올리면 끝
+     */</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="nc">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="kd">throws</span> <span class="nc">Exception</span> <span class="o">{</span>
+        <span class="nc">System</span><span class="o">.</span><span class="na">setIn</span><span class="o">(</span><span class="k">new</span> <span class="nc">FileInputStream</span><span class="o">(</span><span class="s">"./Algo01_input.txt"</span><span class="o">));</span>
+        <span class="nc">BufferedReader</span> <span class="n">br</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">BufferedReader</span><span class="o">(</span><span class="k">new</span> <span class="nc">InputStreamReader</span><span class="o">(</span><span class="nc">System</span><span class="o">.</span><span class="na">in</span><span class="o">));</span>
+        <span class="kt">int</span> <span class="no">T</span> <span class="o">=</span> <span class="nc">Integer</span><span class="o">.</span><span class="na">parseInt</span><span class="o">(</span><span class="n">br</span><span class="o">.</span><span class="na">readLine</span><span class="o">());</span>
+        <span class="k">for</span> <span class="o">(</span><span class="kt">int</span> <span class="n">test_case</span> <span class="o">=</span> <span class="mi">1</span><span class="o">;</span> <span class="n">test_case</span> <span class="o">&lt;=</span> <span class="no">T</span><span class="o">;</span> <span class="n">test_case</span><span class="o">++)</span> <span class="o">{</span>
+            <span class="c1">// List&lt;Character&gt; ori = new ArrayList&lt;Character&gt;();</span>
+            <span class="kt">char</span><span class="o">[]</span> <span class="n">ori2</span> <span class="o">=</span> <span class="n">br</span><span class="o">.</span><span class="na">readLine</span><span class="o">().</span><span class="na">toCharArray</span><span class="o">();</span>
+            <span class="kt">char</span><span class="o">[]</span> <span class="n">err_ori2</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">char</span><span class="o">[</span><span class="n">ori2</span><span class="o">.</span><span class="na">length</span><span class="o">];</span>
+            <span class="k">for</span> <span class="o">(</span><span class="kt">int</span> <span class="n">j</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span> <span class="n">j</span> <span class="o">&lt;</span> <span class="n">err_ori2</span><span class="o">.</span><span class="na">length</span><span class="o">;</span> <span class="n">j</span><span class="o">++)</span> <span class="o">{</span>
+                <span class="n">err_ori2</span><span class="o">[</span><span class="n">j</span><span class="o">]</span> <span class="o">=</span> <span class="sc">'0'</span><span class="o">;</span>
+            <span class="o">}</span>
+            <span class="kt">int</span> <span class="n">count</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span>
+            <span class="k">for</span> <span class="o">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">err_ori2</span><span class="o">.</span><span class="na">length</span><span class="o">;</span> <span class="n">i</span><span class="o">++)</span> <span class="o">{</span>
+                <span class="k">if</span> <span class="o">(</span><span class="n">err_ori2</span><span class="o">[</span><span class="n">i</span><span class="o">]</span> <span class="o">!=</span> <span class="n">ori2</span><span class="o">[</span><span class="n">i</span><span class="o">])</span> <span class="o">{</span>
+                    <span class="k">for</span> <span class="o">(</span><span class="kt">int</span> <span class="n">j</span> <span class="o">=</span> <span class="n">i</span><span class="o">;</span> <span class="n">j</span> <span class="o">&lt;</span> <span class="n">err_ori2</span><span class="o">.</span><span class="na">length</span><span class="o">;</span> <span class="n">j</span><span class="o">++)</span> <span class="o">{</span>
+                        <span class="n">err_ori2</span><span class="o">[</span><span class="n">j</span><span class="o">]</span> <span class="o">=</span> <span class="n">ori2</span><span class="o">[</span><span class="n">i</span><span class="o">];</span>
+                    <span class="o">}</span>
+                    <span class="n">count</span> <span class="o">+=</span> <span class="mi">1</span><span class="o">;</span>
+                <span class="o">}</span>
+            <span class="o">}</span>
+            <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"#"</span><span class="o">+</span><span class="no">T</span><span class="o">+</span><span class="s">" "</span><span class="o">+</span><span class="n">count</span><span class="o">);</span>
+        <span class="o">}</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div>        </div>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+  
+
+
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-tags" aria-hidden="true"></i> 태그: </strong>
+    <span itemprop="keywords">
+    
+      <a href="/tags/#algorithm" class="page__taxonomy-item p-category" rel="tag">Algorithm</a><span class="sep">, </span>
+    
+      <a href="/tags/#swexpertacademy" class="page__taxonomy-item p-category" rel="tag">SWExpertAcademy</a>
+    
+    </span>
+  </p>
+
+
+
+
+  
+
+
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-folder-open" aria-hidden="true"></i> 카테고리: </strong>
+    <span itemprop="keywords">
+    
+      <a href="/categories/#blog" class="page__taxonomy-item p-category" rel="tag">Blog</a>
+    
+    </span>
+  </p>
+
+
+        
+
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> 업데이트:</strong> <time class="dt-published" datetime="2020-05-25">May 25, 2020</time></p>
+
+      </footer>
+
+      <section class="page__share">
+  
+    <h4 class="page__share-title">공유하기</h4>
+  
+
+  <a href="https://twitter.com/intent/tweet?text=%EB%B0%B1%EC%A4%80%2C+1289%2C+%EC%9B%90%EC%9E%AC%EC%9D%98+%EB%A9%94%EB%AA%A8%EB%A6%AC+%EB%B3%B5%EA%B5%AC%ED%95%98%EA%B8%B0%2C+Python%2C+Java%20https%3A%2F%2Fleejeongpil.github.io%2F%2Fblog%2Falgo-swea-1289%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+
+  <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fleejeongpil.github.io%2F%2Fblog%2Falgo-swea-1289%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Fleejeongpil.github.io%2F%2Fblog%2Falgo-swea-1289%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+</section>
+
+
+      
+  <nav class="pagination">
+    
+      <a href="/blog/first-post-test/" class="pagination--pager" title="Mac) github.io 만들기_01: 환경설정
+">이전</a>
+    
+    
+      <a href="#" class="pagination--pager disabled">다음</a>
+    
+  </nav>
+
+    </div>
+
+    
+  </article>
+
+  
+  
+    <div class="page__related">
+      <h2 class="page__related-title">참고</h2>
+      <div class="grid__wrapper">
+        
+           
+
+<div class="grid__item">
+  <article
+    class="archive__item"
+    itemscope
+    itemtype="https://schema.org/CreativeWork"
+  >
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+      <a href="/blog/first-post-test/" rel="permalink"><p>Mac) github.io 만들기_01: 환경설정</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          2 분 소요
+        
+      </span>
+    
+  </p>
+
+ 
+    <p class="archive__item-excerpt" itemprop="description">
+      Mac에 guthub.io(깃허브 블로그)를 만들기 위한 환경을 세팅 해보자.
+
+    </p>
+    
+  </article>
+</div>
+
+        
+      </div>
+    </div>
+  
+  
+</div>
+    </div>
+
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+      <li><strong>팔로우:</strong></li>
+    
+
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+          <li><a href="https://www.youtube.com/channel/UClSdv2fRY2cM5RGF6U5qQGw" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-youtube" aria-hidden="true"></i> Youtube</a></li>
+        
+      
+        
+          <li><a href="https://www.notion.so/Lee-JeongPil-67bd73b192f0405fac46949d6100483f" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-notion" aria-hidden="true"></i> Notion</a></li>
+        
+      
+    
+
+    
+      <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> 피드</a></li>
+    
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2021 Lee JeongPil. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+
+
+
+
+
+
+
+
+
+
+  </body>
+</html>
