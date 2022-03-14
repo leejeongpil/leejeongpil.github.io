@@ -136,9 +136,10 @@ main:
 
 main-sidebar:
   - title: "Parent Page A"
+    url: "/Parent Page A/"
     children:
       - title: "Child Page A1"
-        url: /
+        url: "/Parent Page A/Child Page A1"
       - title: "Child Page A2"
         url: /
       - title: "Child Page A3"
