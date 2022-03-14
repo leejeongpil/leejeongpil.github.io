@@ -1,7 +1,7 @@
 # main links
 
 main:
-  - title: "Quick-Start Guide"
+  - title: "Quick-Start Guide1"
     url: https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/
   # - title: "About"
   #   url: https://mmistakes.github.io/minimal-mistakes/about/
@@ -135,11 +135,16 @@ main:
 #     nav: "docs"
 
 main-sidebar:
+  - title: "test"
+    url: "/test/"
+    children:
+      - title: "test01"
+        url: "/test/test01/"
   - title: "Parent Page A"
     url: "/Parent Page A/"
     children:
       - title: "Child Page A1"
-        url: "/Parent Page A/Child Page A1"
+        url: "/Parent Page A/Child Page A1/"
       - title: "Child Page A2"
         url: /
       - title: "Child Page A3"
